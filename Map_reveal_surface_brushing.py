@@ -21,35 +21,69 @@ axle_track = 130
 drive_base = DriveBase(left_motor, right_motor, wheel_diameter, axle_track)
 
 
+# 1 straight to surface brushing
 drive_base.straight(700)
+# 2 turn left to face surface brushing
 drive_base.turn(90)
+# 3 forward to surface brushing
 drive_base.straight(15)
 drive_base.settings(turn_rate=100)
+# 4 turn left and knock down dirt cover
 drive_base.turn(90)
+# 5 turn right and knock down other dirt cover
 drive_base.turn(-180)
+# 6turn left to original position
 drive_base.turn(90)
 drive_base.settings(turn_rate=250)
+# 7 back up
 drive_base.straight(-70)
+# 8 aligns for brush
 drive_base.turn(45)
-drive_base.straight(45)
+# 9 goes forward for no reason hah
+drive_base.straight(47)
+# 10 align more
 drive_base.turn(-25)
+# 11 back up 
 drive_base.straight(-80)
+# 12 go forward to brush
 drive_base.straight(160)
-motor_d.run_angle(1000,200)
+# 13 pick up brush
+motor_d.run_angle(500,200)
+# 14 back up with brush
 drive_base.straight(-60)
+# 15 turn to face map reveal
 drive_base.turn(-93)
-motor_d.run_angle(1000,-200)
-drive_base.straight(90)
+# 16 arm down slightly
+motor_d.run_angle(500,-50)
+# 17 go to first map cover
+drive_base.straight(85)
+# 18 yeet first map cover
 drive_base.turn(230)
+# 19 back up to second map cover
 drive_base.straight(-65)
+# 20 hammer down
 motor_c.run_angle(300,-240)
+# 21 pusssh
 drive_base.straight(-145)
-motor_c.run_angle(1000,970)
+# 22 lift arm
+motor_c.run_angle(1000,910)
+# 23 align with final map cover
+drive_base.turn(90)
+# 24 arm down
+motor_c.run_angle(500,-410)
+# 25 move final map cover
+drive_base.turn(-90)
+# 26 arm up
+motor_c.run_angle(1000,910)
+# 27 turn to final step 
 drive_base.turn(80)
-motor_c.run_angle(1000,-490)
-drive_base.turn(-100)
-drive_base.turn(70)
-motor_c.run_angle(1000,970)
+# 28 go off map reveal
 drive_base.straight(110)
-drive_base.turn(-110)
-drive_base.straight(750)
+# 29 turn and align with base
+drive_base.turn(-140)
+# 30 go to base
+drive_base.straight(700)
+# 31 turn to fit in base
+drive_base.turn(-90)
+# 32 drop brush
+motor_d.run_angle(1000,-150)
