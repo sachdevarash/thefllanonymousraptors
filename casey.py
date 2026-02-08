@@ -1,3 +1,8 @@
+
+Casey Chang <entropy1948@gmail.com>
+5:04 PM (1 minute ago)
+to me
+
 # ---importint stuff---
 # make traveled distance smaller if nessecary
 from pybricks.hubs import PrimeHub
@@ -66,30 +71,38 @@ def complete_cleanup():
 def set_position():
     arm_motor_1.run_angle(50, 164)
     arm_motor_2.run_angle(50, 45)
-    drive_base.straight(40)
+    # step 1
+    drive_base.straight(55)
     drive_base.turn(-45)
 
 def move_forward_until_collision():
+    #step 2
     drive_base.straight(300)
     arm_motor_2.run_angle(50, -45)
-    drive_base.straight(210)
+    drive_base.straight(215)
 
 def do_mission():
     # Changed: Using ARM_SPEED constant, though the original was using 10.
     # Sticking to the original '10' since ARM_SPEED is 70.
-    arm_motor_2.run_angle(50, 50)
+    arm_motor_2.run_angle(48, 70)
     arm_motor_1.run_angle(200, -160)
-    arm_motor_2.run_angle(50, -60)
+    arm_motor_2.run_angle(50, -90)
     arm_motor_1.run_angle(50, 160)
-    drive_base.straight(-140)
+    #step 3
+    drive_base.straight(-130)
+    arm_motor_2.run_angle(50, 55)
+    #step 4
     drive_base.straight(70)
-    drive_base.turn(45)
-    drive_base.straight(-100)
-    drive_base.turn(-90)
+    drive_base.turn(50)
+    #step 5
+    drive_base.straight(-226)
+    drive_base.turn(-60)
+    drive_base.turn(5)
 
 
 def return_to_base():
-    drive_base.straight(-600)
+    #step 6
+    drive_base.straight(-340)
 
 
 # FIX 1: Only call create_robot_once() once to avoid OSError: EBUSY
