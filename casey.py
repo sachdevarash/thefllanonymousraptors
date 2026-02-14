@@ -1,8 +1,3 @@
-
-Casey Chang <entropy1948@gmail.com>
-5:04 PM (1 minute ago)
-to me
-
 # ---importint stuff---
 # make traveled distance smaller if nessecary
 from pybricks.hubs import PrimeHub
