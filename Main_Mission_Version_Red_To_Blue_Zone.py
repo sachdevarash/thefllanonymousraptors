@@ -31,90 +31,82 @@ motor_B.reset_angle(0) # reset angle to 0
 # Threshold for detecting the line (adjust based on environment)
 THRESHOLD = 10  # Reflectivity value. Tune this!
 
+drive_base.use_gyro(True)
 
 drive_base.reset(distance=0, angle=0)  # sets angle to 90°
-# step 1
+# Move arm up
 motor_B.run_angle(250,-180)
-print("1")
-# step 2
+# Move to mission 1
+# Step 1
 drive_base.straight(270)
-print("2")
-# step 3
+# Move arm down to remove sand
+# Step 2
 motor_B.run_angle(250,450)
-print("3")
-# step 4
+# Move backwards
+# Step 3
 drive_base.straight(-100)
-print("4")
-# step 5
-drive_base.turn(-90)
-print("5")
-# step 6
-drive_base.straight(200)
-print("6")
-# step 7
+# Move arm up to mave out of the way
 motor_B.run_angle(250,-180)
-print("7")
-# step 8
+
+# Turn -90 Degrees
+# Step 4
+right_motor.run_angle(speed=250, rotation_angle=315)
+# Move forward for alignment
+# Step 5
+drive_base.straight(10)
+
+# Turn 90 degrees
+# Step 6
+left_motor.run_angle(speed=250, rotation_angle=315)
+
+# Push red slidey thingy
+# Step 7
+drive_base.straight(200)
+# Move arm up
+motor_B.run_angle(250,-180)
+ # Move backwards
+ # Step 8
+drive_base.straight(-150)
+# Leave Mission 1
+
 drive_base.turn(90)
-print("8")
-# step 9
-drive_base.straight(300)
-print("9")
-# step 10
-drive_base.straight(-100)
-print("10")
-# # step 11
+# Move away from mission
+drive_base.straight(-125)
+
+# Turn to move to mission 2
+# Step 9
 drive_base.turn(-90)
-print("11")
-# # step 12
-drive_base.straight(55)
-print("12")
-# # step 13
-drive_base.turn(80)
-print("13")
-# # step 14
-drive_base.straight(257)
-print("14")
-# # step 15
-drive_base.turn(5)
-print("15")
-# # step 16
-drive_base.turn(200)
-print("16")
-# # heh heh heh
-# # step 18
-drive_base.straight(-90)
-print("18")
-# # step 19
-drive_base.turn(100)
-print("19")
-# # step 20
-drive_base.straight(-250)
-print("20")
-drive_base.turn(-0)
-# step 22
+# Start moving to mission 2
+# Step 10
+drive_base.straight(450)
+# turn to mission 2
+# Step 11
+drive_base.turn(-90)
+# Move into mission 2
+# Step 12
+drive_base.straight(-275)
+# Turn towards the gear in mission 2
+drive_base.turn(-5)
+# drive_base.turn(180)
+# drive_base.straight(90)
+# drive_base.turn(105)
+# drive_base.straight(-210)
+drive_base.turn(-5)
 def run_motor_a(speed,angle):
     motor_A.run_angle(speed,0-angle*3.857)
-print("22")
-# step 23
-run_motor_a(500,180)
+# turn motor to turn gear
+# Step 13
+run_motor_a(500,-180)
 drive_base.straight(-50)
-drive_base.turn(-45)
-run_motor_a(500,720)
-print("23")
+drive_base.turn(-20)
+drive_base.straight(-50)
+run_motor_a(500,650)
+
 
 #  go home
-drive_base.straight(70)
-drive_base.turn(120)
-drive_base.straight(850)
-
-
-
-
-
-    
-
-
-
-
-
+# Step 14
+# drive_base.straight(70)
+# Step 15
+# drive_base.turn(120)
+# Step 16
+# drive_base.straight(850)
