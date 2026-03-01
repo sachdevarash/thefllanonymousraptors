@@ -1,8 +1,9 @@
+#by Casey
 # ---importint stuff---
 # make traveled distance smaller if nessecary
 from pybricks.hubs import PrimeHub
 from pybricks.parameters import Port, Direction, Stop
-from pybricks.pupdevices import UltrasonicSensor, Motor
+from pybricks.pupdevices import UltrasonicSensor, Motor 
 from pybricks.robotics import DriveBase
 from pybricks.tools import wait, StopWatch
 
@@ -11,7 +12,7 @@ from pybricks.tools import wait, StopWatch
 DRIVE_FAST_SPEED_CM_PER_SEC = 30
 DRIVE_APPROACH_SPEED_CM_PER_SEC = 8
 DRIVE_MISSION_SPEED_CM_PER_SEC = 15
-ARM_SPEED = 70
+ARM_SPEED = 70 
 
 
 # BUILDING 8
@@ -19,13 +20,15 @@ ARM_SPEED = 70
 BUILDING8_DISTANCE_THRESHOLD_CM = 6
 BUILDING8_INITIAL_DISTANCE_CM = 30
 
-def create_robot_once():
+def create_robot_once(): 
     hub = PrimeHub()
-   
-    distance_sensor = UltrasonicSensor(Port.B)
+    
+    hub.imu.reset_heading(0)
+
+    distance_sensor = UltrasonicSensor(Port.B) 
 
     left_motor = Motor(Port.A, Direction.COUNTERCLOCKWISE)
-    right_motor = Motor(Port.E)
+    right_motor = Motor(Port.E) 
 
     # ORIGINAL ARM MOTOR
     arm_motor_1 = Motor(Port.D, Direction.CLOCKWISE, [[28, 36], [12, 20]])
@@ -40,11 +43,11 @@ def create_robot_once():
     drive_base.settings(
         straight_speed=DRIVE_FAST_SPEED_CM_PER_SEC*10)
     drive_base.use_gyro(True)
-   
+    
     # CHANGED: Return both arm motors
-    return drive_base, arm_motor_1, arm_motor_2, distance_sensor
+    return drive_base, arm_motor_1, arm_motor_2, distance_sensor 
 
-   
+    
 
 # --- TOP-LEVEL FUNCTIONS ---
 
@@ -67,7 +70,7 @@ def set_position():
     arm_motor_1.run_angle(50, 164)
     arm_motor_2.run_angle(50, 45)
     # step 1
-    drive_base.straight(55)
+    drive_base.straight(50)
     drive_base.turn(-45)
 
 def move_forward_until_collision():
@@ -84,20 +87,20 @@ def do_mission():
     arm_motor_2.run_angle(50, -90)
     arm_motor_1.run_angle(50, 160)
     #step 3
-    drive_base.straight(-130)
+    drive_base.straight(-150)
     arm_motor_2.run_angle(50, 55)
     #step 4
     drive_base.straight(70)
     drive_base.turn(50)
     #step 5
-    drive_base.straight(-226)
-    drive_base.turn(-60)
+    drive_base.straight(-210)
+    drive_base.turn(-80)
     drive_base.turn(5)
 
 
 def return_to_base():
     #step 6
-    drive_base.straight(-340)
+    drive_base.straight(-370)
 
 
 # FIX 1: Only call create_robot_once() once to avoid OSError: EBUSY
