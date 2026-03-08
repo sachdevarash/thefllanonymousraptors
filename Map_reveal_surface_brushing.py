@@ -1,8 +1,8 @@
-#Author: Nolan
 from pybricks.pupdevices import Motor
 from pybricks.parameters import Port, Direction
 from pybricks.robotics import DriveBase
 from pybricks.hubs import PrimeHub
+
 
 #line up at last black line
 #crunches are ok
@@ -27,7 +27,7 @@ drive_base.straight(700)
 # 2 turn left to face surface brushing
 drive_base.turn(90)
 # 3 forward to surface brushing
-drive_base.straight(15)
+drive_base.straight(16)
 drive_base.settings(turn_rate=100)
 # 4 turn left and knock down dirt cover
 drive_base.turn(90)
@@ -39,21 +39,21 @@ drive_base.settings(turn_rate=250)
 # 7 back up
 drive_base.straight(-70)
 # 8 aligns for brush
-drive_base.turn(45)
+drive_base.turn(44)
 # 9 goes forward for no reason hah
 drive_base.straight(47)
 # 10 align more
-drive_base.turn(-25)
+drive_base.turn(-27)
 # 11 back up 
 drive_base.straight(-80)
 # 12 go forward to brush
-drive_base.straight(160)
+drive_base.straight(153)
 # 13 pick up brush
-motor_d.run_angle(500,200)
+motor_d.run_angle(300,200)
 # 14 back up with brush
 drive_base.straight(-60)
 # 15 turn to face map reveal
-drive_base.turn(-93)
+drive_base.turn(-92)
 # 16 arm down slightly
 motor_d.run_angle(500,-50)
 # 17 go to first map cover
@@ -75,7 +75,7 @@ motor_c.run_angle(500,-410)
 # 25 move final map cover
 drive_base.turn(-90)
 # 26 arm up
-motor_c.run_angle(1000,910)
+motor_c.run_angle(1000,910) 
 # 27 turn to final step 
 drive_base.turn(80)
 # 28 go off map reveal
@@ -88,3 +88,8 @@ drive_base.straight(700)
 drive_base.turn(-90)
 # 32 drop brush
 motor_d.run_angle(1000,-150)
+#move forward
+drive_base.straight(150)
+#lift
+motor_d.run_angle(1000,500)
+# then win amazingly
