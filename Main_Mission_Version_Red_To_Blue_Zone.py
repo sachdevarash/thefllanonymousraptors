@@ -52,8 +52,12 @@ motor_B.run_angle(250,-180)
 # Step 4
 right_motor.run_angle(speed=250, rotation_angle=315)
 # Move forward for alignment
+drive_base.use_gyro(False)
+
 # Step 5
 drive_base.straight(10)
+drive_base.use_gyro(True)
+
 
 # Turn 90 degrees
 # Step 6
@@ -86,12 +90,16 @@ drive_base.turn(-90)
 # Step 12
 drive_base.straight(-275)
 # Turn towards the gear in mission 2
+drive_base.use_gyro(False)
+
 drive_base.turn(-5)
 # drive_base.turn(180)
 # drive_base.straight(90)
 # drive_base.turn(105)
 # drive_base.straight(-210)
 drive_base.turn(-5)
+drive_base.use_gyro(True)
+
 def run_motor_a(speed,angle):
     motor_A.run_angle(speed,0-angle*3.857)
 # turn motor to turn gear
