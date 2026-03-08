@@ -1,4 +1,3 @@
-#Author: Ahaan Bahulkar
 from pybricks.hubs import PrimeHub
 from pybricks.pupdevices import Motor, ColorSensor, UltrasonicSensor, ForceSensor
 from pybricks.parameters import Button, Color, Direction, Port, Side, Stop
@@ -99,15 +98,18 @@ def run_motor_a(speed,angle):
 # Step 13
 run_motor_a(500,-180)
 drive_base.straight(-50)
-drive_base.turn(-20)
+# drive_base.turn(-20)
 drive_base.straight(-50)
 run_motor_a(500,650)
 
 
 #  go home
 # Step 14
-# drive_base.straight(70)
+drive_base.straight(70)
 # Step 15
-# drive_base.turn(120)
+drive_base.turn(110)
 # Step 16
-# drive_base.straight(850)
+drive_base.straight(850)
+
+
+    
