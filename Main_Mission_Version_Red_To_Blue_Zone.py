@@ -109,7 +109,7 @@ drive_base.straight(70)
 # Step 15
 drive_base.turn(110)
 # Step 16
-drive_base.straight(850)
+drive_base.straight(900)
 
 
     
