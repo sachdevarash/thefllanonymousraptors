@@ -12,7 +12,7 @@ if selected == "N":
     # call mission one
 elif selected == "A":
     # Ahaan's Mission
-    import Main_Maission_Version_Red_To_Blue_Zone
+    import Main_Mission_Version_Red_To_Blue_Zone
 elif selected == "R":
     # Rohin's Mission
     import FLL9_DIRECT_FORGE_WHOLIVEDTHERE
