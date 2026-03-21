@@ -15,7 +15,6 @@ back_motor = Motor(Port.C)
 distance_sensor = UltrasonicSensor(Port.B)
 right_color_sensor = ColorSensor(Port.F)
 
-#gyro enabled
 drive_base.use_gyro(True)
 #navigate to 'who lived there'
 drive_base.settings(straight_speed=300) #navigate slow to the mission
@@ -54,12 +53,13 @@ wait(100)
 drive_base.straight(17)
 wait(100)
 # Step 10
-drive_base.turn(-50) 
+drive_base.turn(-80) 
 wait(100)
+drive_base.turn(30) 
 
 
 #Execute Heavy lift
-front_motor.run_angle(200,-270) #Rohin 2nd number is -300 previous run 280
+front_motor.run_angle(200,-250) #200= second number
 wait(600) #wait for arm to settle
 drive_base.settings(turn_rate=500)
 #Step 11
@@ -68,7 +68,7 @@ wait(100)
 
 #return to base
 front_motor.run_angle(200,150)
-drive_base.turn(20)
+drive_base.turn(20)#20
 drive_base.settings(turn_rate=300)
 #Step 12
 drive_base.straight(200)
