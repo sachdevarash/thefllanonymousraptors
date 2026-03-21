@@ -21,9 +21,10 @@ wheel_diameter = 88
 axle_track = 130
 drive_base = DriveBase(left_motor, right_motor, wheel_diameter, axle_track)
 
-
+drive_base.use_gyro(True)
 # 1 straight to surface brushing
 drive_base.straight(700)
+drive_base.use_gyro(False)
 # 2 turn left to face surface brushing
 drive_base.turn(90)
 # 3 forward to surface brushing
