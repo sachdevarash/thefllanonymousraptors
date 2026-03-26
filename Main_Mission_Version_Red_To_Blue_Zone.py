@@ -55,7 +55,7 @@ left_motor.run_angle(speed=250, rotation_angle=-315)
 drive_base.use_gyro(False)
 
 # Step 5
-drive_base.straight(-10)
+# drive_base.straight(-10)
 drive_base.use_gyro(True)
 
 
@@ -70,34 +70,34 @@ drive_base.straight(-200)
 motor_B.run_angle(250,-180)
  # Move backwards
  # Step 8
-drive_base.straight(120)
+drive_base.straight(150)
 # Leave Mission 1
 
 drive_base.turn(90)
 # Move away from mission
-drive_base.straight(120)
+drive_base.straight(105)
 
 # Turn to move to mission 2
 # Step 9
 drive_base.turn(-90)
 # Start moving to mission 2
 # Step 10
-drive_base.straight(-400)
+drive_base.straight(-425)
 # turn to mission 2
 # Step 11
 drive_base.turn(-90)
 # Move into mission 2
 # Step 12
-drive_base.straight(95)
+drive_base.straight(125)
 # Turn towards the gear in mission 2
 drive_base.use_gyro(False)
 
-drive_base.turn(-5)
+# drive_base.turn(-5)
 # drive_base.turn(180)
 # drive_base.straight(90)
 # drive_base.turn(105)
 # drive_base.straight(-210)
-drive_base.turn(-5)
+# drive_base.turn(-5)
 drive_base.use_gyro(True)
 
 def run_motor_a(speed,angle):
@@ -105,9 +105,9 @@ def run_motor_a(speed,angle):
 # turn motor to turn gear
 # Step 13
 run_motor_a(500,-180)
-# drive_base.straight(-50)
+drive_base.straight(50)
 # drive_base.turn(20)
-# drive_base.straight(-50)
+# drive_base.straight(50)
 run_motor_a(500,650)
 
 
@@ -115,7 +115,7 @@ run_motor_a(500,650)
 # Step 14
 drive_base.straight(-70)
 # Step 15
-drive_base.turn(90)
+drive_base.turn(100)
 # Step 16
 drive_base.straight(-900)
 
