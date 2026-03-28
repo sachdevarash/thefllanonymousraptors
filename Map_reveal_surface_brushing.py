@@ -84,9 +84,9 @@ motor_c.run_angle(1000,910)
 # 27 turn to final step 
 drive_base.turn(-80)
 # 28 go off map reveal
-drive_base.straight(100)
+drive_base.straight(110)
 # 29 turn and align with base
-drive_base.turn(140)
+drive_base.turn(135)
 # 30 go to base
 drive_base.use_gyro(True)
 drive_base.straight(700)
