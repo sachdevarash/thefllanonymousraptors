@@ -97,4 +97,3 @@ drive_base.straight(150)
 #lift
 motor_d.run_angle(1000,500)
 # then win amazingly
-motor_d.run_angle(1000,-250)
