@@ -75,7 +75,7 @@ drive_base.straight(150)
 
 drive_base.turn(90)
 # Move away from mission
-drive_base.straight(105)
+drive_base.straight(95)
 
 # Turn to move to mission 2
 # Step 9
@@ -105,7 +105,7 @@ def run_motor_a(speed,angle):
 # turn motor to turn gear
 # Step 13
 run_motor_a(500,-180)
-drive_base.straight(50)
+# drive_base.straight(50)
 # drive_base.turn(20)
 # drive_base.straight(50)
 run_motor_a(500,650)
