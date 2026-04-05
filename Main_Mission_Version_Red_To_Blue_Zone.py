@@ -104,13 +104,13 @@ def run_motor_a(speed,angle):
     motor_A.run_angle(speed,0-angle*3.857)
 # turn motor to turn gear
 # Step 13
-run_motor_a(500,-180)
+run_motor_a(500,-90)
 # drive_base.straight(50)
 # drive_base.turn(20)
 # drive_base.straight(50)
 run_motor_a(500,650)
 
-
+drive_base.settings(straight_speed=500)
 #  go home
 # Step 14
 drive_base.straight(-70)
