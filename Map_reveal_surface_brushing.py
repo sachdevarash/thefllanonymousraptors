@@ -62,11 +62,11 @@ motor_d.run_angle(500,-50)
 # 17 go to first map cover
 drive_base.straight(85)
 # 18 yeet first map cover
-drive_base.turn(-235)
+drive_base.turn(-230)
 # 19 back up to second map cover
 drive_base.straight(-65)
 # 20 hammer down
-motor_c.run_angle(300,-240)
+motor_c.run_angle(300,-270)
 # 21 pusssh
 drive_base.straight(-145)
 # 22 lift arm
@@ -83,8 +83,9 @@ motor_c.run_angle(1000,910)
 # 28 go off map reveal
 drive_base.straight(110)
 # 29 turn and align with base
-drive_base.turn(135)
+drive_base.turn(130)
 # 30 go to base
+drive_base.settings(1000,1000)
 drive_base.use_gyro(True)
 drive_base.straight(700)
 drive_base.use_gyro(False)
