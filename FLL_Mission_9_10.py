@@ -41,7 +41,9 @@ def create_robot_once():
     drive_base = DriveBase(
         left_motor, right_motor, wheel_diameter=88, axle_track=142)
     drive_base.settings(
-        straight_speed=DRIVE_FAST_SPEED_CM_PER_SEC*10)
+        straight_speed=DRIVE_FAST_SPEED_CM_PER_SEC*10
+        
+        )
     drive_base.use_gyro(True)
     
     # CHANGED: Return both arm motors
@@ -67,8 +69,8 @@ def complete_cleanup():
 
 # The following functions now rely on the global variables set below.
 def set_position():
-    arm_motor_1.run_angle(50, 164)
-    arm_motor_2.run_angle(50, 45)
+    arm_motor_2.run_angle(50, 45, wait=False)
+    arm_motor_1.run_angle(50, 164, wait=False)
     # step 1
     drive_base.straight(50)
     drive_base.turn(-45)
@@ -82,18 +84,18 @@ def move_forward_until_collision():
 def do_mission():
     # Changed: Using ARM_SPEED constant, though the original was using 10.
     # Sticking to the original '10' since ARM_SPEED is 70.
-    arm_motor_2.run_angle(48, 70)
+    arm_motor_2.run_angle(100, 60, wait=False)
     arm_motor_1.run_angle(200, -160)
     arm_motor_2.run_angle(50, -90)
-    arm_motor_1.run_angle(50, 160)
+    arm_motor_1.run_angle(200, 160)
     #step 3
-    drive_base.straight(-150)
+    drive_base.straight(-150, wait=False)
     arm_motor_2.run_angle(50, 55)
     #step 4
-    drive_base.straight(70)
-    drive_base.turn(50)
+    drive_base.straight(60)
+    drive_base.turn(40)
     #step 5
-    drive_base.straight(-210)
+    drive_base.straight(-180)
     drive_base.turn(-80)
     drive_base.turn(5)
 
