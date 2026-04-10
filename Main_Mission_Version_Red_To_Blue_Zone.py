@@ -110,7 +110,7 @@ run_motor_a(500,-90)
 # drive_base.straight(50)
 run_motor_a(500,650)
 
-drive_base.settings(straight_speed=500)
+drive_base.settings(straight_speed=2000)
 #  go home
 # Step 14
 drive_base.straight(-70)
