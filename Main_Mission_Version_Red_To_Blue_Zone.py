@@ -82,13 +82,13 @@ drive_base.straight(95)
 drive_base.turn(-90)
 # Start moving to mission 2
 # Step 10
-drive_base.straight(-425)
+drive_base.straight(-415)
 # turn to mission 2
 # Step 11
 drive_base.turn(-90)
 # Move into mission 2
 # Step 12
-drive_base.straight(125)
+drive_base.straight(85)
 # Turn towards the gear in mission 2
 drive_base.use_gyro(False)
 
@@ -110,7 +110,7 @@ run_motor_a(500,-90)
 # drive_base.straight(50)
 run_motor_a(500,650)
 
-drive_base.settings(straight_speed=2000)
+drive_base.settings(straight_speed=1500)
 #  go home
 # Step 14
 drive_base.straight(-70)
