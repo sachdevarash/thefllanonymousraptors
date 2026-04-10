@@ -33,11 +33,11 @@ drive_base.turn(-90)
 drive_base.straight(16)
 drive_base.settings(turn_rate=100)
 # 4 turn left and knock down dirt cover
-drive_base.turn(-90)
+drive_base.turn(-45)
 # 5 turn right and knock down other dirt cover
-drive_base.turn(180)
+drive_base.turn(60)
 # 6turn left to original position
-drive_base.turn(-90)
+drive_base.turn(-15)
 drive_base.settings(turn_rate=250)
 # 7 back up
 drive_base.straight(-70)
@@ -77,7 +77,7 @@ drive_base.turn(-90)
 motor_c.run_angle(500,-410)
 # 25 move final map cover
 drive_base.turn(85)
-drive_base.turn(-85)
+drive_base.turn(-75)
 # 26 arm up
 motor_c.run_angle(1000,910) 
 # 28 go off map reveal
@@ -85,16 +85,14 @@ drive_base.straight(110)
 # 29 turn and align with base
 drive_base.turn(130)
 # 30 go to base
-drive_base.settings(1000,1000)
+drive_base.settings(1500,1000)
 drive_base.use_gyro(True)
-drive_base.straight(700)
+drive_base.straight(800)
 drive_base.use_gyro(False)
 # 31 turn to fit in base
 drive_base.turn(90)
-# 32 drop brush
-motor_d.run_angle(1000,-200)
+# 32 drop brush motor_d.run_angle(1000,-200)
 #move forward
 drive_base.straight(150)
-#lift
-motor_d.run_angle(1000,500)
+#lift motor_d.run_angle(1000,500)
 # then win amazingly
