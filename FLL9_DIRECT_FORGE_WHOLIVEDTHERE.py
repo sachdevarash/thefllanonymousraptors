@@ -1,3 +1,4 @@
+# Rohin's bot only (Nolan's bot code is on the github)
 from pybricks.hubs import PrimeHub
 from pybricks.pupdevices import Motor, ColorSensor, UltrasonicSensor, ForceSensor
 from pybricks.parameters import Button, Color, Direction, Port, Side, Stop
@@ -20,17 +21,17 @@ drive_base.use_gyro(True)
 drive_base.settings(straight_speed=300) #navigate slow to the mission
 drive_base.settings(turn_rate=100)
 # Step 1
-drive_base.straight(40)
+drive_base.straight(70)
 #Step2
 drive_base.turn(-90)
 # Step 3
-drive_base.straight(250)#255
+drive_base.straight(250) #Prapti 235
 # Step 4
 drive_base.turn(90)
 # Step 5
-drive_base.straight(375)
-front_motor.run_angle(200,200)#40
-drive_base.straight(350) #Rohin 335
+drive_base.straight(325)
+front_motor.run_angle(200,200)
+drive_base.straight(360) 
 
 
 # Disable gyro for the actual missions
@@ -44,18 +45,18 @@ drive_base.turn(-50)
 
 #Navigate to Forge next
 #Step7
-drive_base.straight(-95) #Rohin 75 last run: 85
+drive_base.straight(-95) 
 #Step 8
 drive_base.turn(90)
 #Execute the forge mission
 wait(100)
 #Step9
-drive_base.straight(17)
+drive_base.straight(17) #17 on nolan's bot. before Prapti changed it 38
 wait(100)
 # Step 10
 drive_base.turn(-80) 
 wait(100)
-drive_base.turn(30) 
+drive_base.turn(35) #Prapti 30 last thing
 
 
 #Execute Heavy lift
