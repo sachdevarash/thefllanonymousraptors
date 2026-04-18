@@ -65,7 +65,7 @@ right_motor.run_angle(speed=250, rotation_angle=-315)
 
 # Push red slidey thingy
 # Step 7
-drive_base.straight(-200)
+drive_base.straight(-175)
 # Move arm up
 motor_B.run_angle(250,-180)
  # Move backwards
