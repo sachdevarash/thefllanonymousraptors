@@ -25,19 +25,19 @@ drive_base.reset(angle=0)
 
 drive_base.use_gyro(True)
 # 1 straight to surface brushing
-drive_base.straight(700)
+drive_base.straight(692)
 drive_base.use_gyro(False)
 # 2 turn left to face surface brushing
-drive_base.turn(-90)
+drive_base.turn(-95)
 # 3 forward to surface brushing
 drive_base.straight(16)
 drive_base.settings(turn_rate=100)
 # 4 turn left and knock down dirt cover
 drive_base.turn(-45)
 # 5 turn right and knock down other dirt cover
-drive_base.turn(60)
+drive_base.turn(90)
 # 6turn left to original position
-drive_base.turn(-15)
+drive_base.turn(-45)
 drive_base.settings(turn_rate=250)
 # 7 back up
 drive_base.straight(-70)
@@ -52,7 +52,7 @@ drive_base.straight(-80)
 # 12 go forward to brush
 drive_base.straight(153)
 # 13 pick up brush
-motor_d.run_angle(300,200)
+motor_d.run_angle(300,170)
 # 14 back up with brush
 drive_base.straight(-60)
 # 15 turn to face map reveal
@@ -62,9 +62,9 @@ motor_d.run_angle(500,-50)
 # 17 go to first map cover
 drive_base.straight(85)
 # 18 yeet first map cover
-drive_base.turn(-230)
+drive_base.turn(-235)
 # 19 back up to second map cover
-drive_base.straight(-65)
+drive_base.straight(-62)
 # 20 hammer down
 motor_c.run_angle(300,-270)
 # 21 pusssh
@@ -91,8 +91,10 @@ drive_base.straight(800)
 drive_base.use_gyro(False)
 # 31 turn to fit in base
 drive_base.turn(90)
-# 32 drop brush motor_d.run_angle(1000,-200)
+# 32 drop brush
+motor_d.run_angle(1000,-150)
 #move forward
 drive_base.straight(150)
-#lift motor_d.run_angle(1000,500)
+#lift
+motor_d.run_angle(1000,300)
 # then win amazingly
