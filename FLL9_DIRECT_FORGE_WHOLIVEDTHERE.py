@@ -58,7 +58,7 @@ wait(100)
 drive_base.straight(17) #17 on nolan's bot. before Prapti changed it 38
 wait(100)
 # Step 10
-drive_base.settings(turn_rate=55)#50
+drive_base.settings(turn_rate=150)#50,300
 
 
 drive_base.turn(-80) 
