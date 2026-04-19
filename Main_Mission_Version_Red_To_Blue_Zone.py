@@ -106,7 +106,7 @@ def run_motor_a(speed,angle):
 # Step 13
 run_motor_a(500,-90)
 # drive_base.straight(50)
-# drive_base.turn(20)
+drive_base.turn(-20)
 # drive_base.straight(50)
 run_motor_a(500,650)
 
@@ -115,7 +115,7 @@ drive_base.settings(straight_speed=1500)
 # Step 14
 drive_base.straight(-70)
 # Step 15
-drive_base.turn(100)
+drive_base.turn(120)
 # Step 16
 drive_base.straight(-900)
 
