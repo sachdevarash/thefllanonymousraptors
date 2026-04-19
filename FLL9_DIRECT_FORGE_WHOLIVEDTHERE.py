@@ -19,8 +19,6 @@ right_motor = Motor(Port.E)
 drive_base = DriveBase(left_motor, right_motor, wheel_diameter=88, axle_track=128)
 front_motor = Motor(Port.D)
 back_motor = Motor(Port.C)
-distance_sensor = UltrasonicSensor(Port.B)
-right_color_sensor = ColorSensor(Port.F)
 
 drive_base.use_gyro(True)
 #navigate to 'who lived there'
