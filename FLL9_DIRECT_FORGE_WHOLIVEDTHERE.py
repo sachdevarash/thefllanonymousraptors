@@ -77,12 +77,14 @@ wait(100)
 #return to base
 front_motor.run_angle(200,150)
 drive_base.turn(20)#20
-drive_base.settings(turn_rate=300)
+drive_base.settings(turn_rate=300)  #
 #Step 12
-drive_base.straight(200)
+drive_base.settings(straight_speed=1000) #
+wait(100)
+drive_base.straight(-125)
 wait(100)
 #Step 13
-drive_base.straight(-325)
+
 #Step 14
 drive_base.turn(80)
 #Step 15
