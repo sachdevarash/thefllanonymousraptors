@@ -1,3 +1,9 @@
+#april 19
+
+
+
+
+
 # Rohin's bot only (Nolan's bot code is on the github)
 from pybricks.hubs import PrimeHub
 from pybricks.pupdevices import Motor, ColorSensor, UltrasonicSensor, ForceSensor
@@ -54,6 +60,9 @@ wait(100)
 drive_base.straight(17) #17 on nolan's bot. before Prapti changed it 38
 wait(100)
 # Step 10
+drive_base.settings(turn_rate=55)#50
+
+
 drive_base.turn(-80) 
 wait(100)
 drive_base.turn(35) #Prapti 30 last thing
